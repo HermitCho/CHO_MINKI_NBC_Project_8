@@ -1,0 +1,54 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "NBCPlayerController.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef NBC_PROJECT_8_NBCPlayerController_generated_h
+#error "NBCPlayerController.generated.h already included, missing '#pragma once' in NBCPlayerController.h"
+#endif
+#define NBC_PROJECT_8_NBCPlayerController_generated_h
+
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesANBCPlayerController(); \
+	friend struct Z_Construct_UClass_ANBCPlayerController_Statics; \
+public: \
+	DECLARE_CLASS(ANBCPlayerController, APlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/NBC_Project_8"), NO_API) \
+	DECLARE_SERIALIZER(ANBCPlayerController)
+
+
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	ANBCPlayerController(ANBCPlayerController&&); \
+	ANBCPlayerController(const ANBCPlayerController&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ANBCPlayerController); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ANBCPlayerController); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANBCPlayerController) \
+	NO_API virtual ~ANBCPlayerController();
+
+
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_12_PROLOG
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> NBC_PROJECT_8_API UClass* StaticClass<class ANBCPlayerController>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
