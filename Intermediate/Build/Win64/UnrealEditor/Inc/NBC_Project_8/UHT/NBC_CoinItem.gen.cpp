@@ -96,10 +96,10 @@ ANBC_CoinItem::~ANBC_CoinItem() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_CoinItem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_CoinItem, ANBC_CoinItem::StaticClass, TEXT("ANBC_CoinItem"), &Z_Registration_Info_UClass_ANBC_CoinItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_CoinItem), 241524029U) },
+		{ Z_Construct_UClass_ANBC_CoinItem, ANBC_CoinItem::StaticClass, TEXT("ANBC_CoinItem"), &Z_Registration_Info_UClass_ANBC_CoinItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_CoinItem), 3101456662U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_CoinItem_h_270869742(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_CoinItem_h_523271925(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_CoinItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_CoinItem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

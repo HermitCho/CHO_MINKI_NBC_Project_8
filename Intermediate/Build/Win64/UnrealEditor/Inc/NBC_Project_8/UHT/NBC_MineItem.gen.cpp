@@ -10,6 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeNBC_MineItem() {}
 
 // Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 NBC_PROJECT_8_API UClass* Z_Construct_UClass_ANBC_BaseItem();
 NBC_PROJECT_8_API UClass* Z_Construct_UClass_ANBC_MineItem();
 NBC_PROJECT_8_API UClass* Z_Construct_UClass_ANBC_MineItem_NoRegister();
@@ -30,6 +33,19 @@ struct Z_Construct_UClass_ANBC_MineItem_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "IncludePath", "NBC_MineItem.h" },
+		{ "ModuleRelativePath", "Public/NBC_MineItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionCollision_MetaData[] = {
+		{ "Category", "Item|Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/NBC_MineItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionParticle_MetaData[] = {
+		{ "Category", "Item|Effects" },
+		{ "ModuleRelativePath", "Public/NBC_MineItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionSound_MetaData[] = {
+		{ "Category", "Item|Effects" },
 		{ "ModuleRelativePath", "Public/NBC_MineItem.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionDelay_MetaData[] = {
@@ -63,6 +79,9 @@ struct Z_Construct_UClass_ANBC_MineItem_Statics
 #endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionCollision;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionParticle;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionSound;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ExplosionDelay;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ExplosionRadius;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ExplosionDamage;
@@ -73,10 +92,16 @@ struct Z_Construct_UClass_ANBC_MineItem_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDelay = { "ExplosionDelay", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionDelay), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionDelay_MetaData), NewProp_ExplosionDelay_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionRadius = { "ExplosionRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionRadius_MetaData), NewProp_ExplosionRadius_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDamage = { "ExplosionDamage", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionDamage_MetaData), NewProp_ExplosionDamage_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionCollision = { "ExplosionCollision", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionCollision), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionCollision_MetaData), NewProp_ExplosionCollision_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionParticle = { "ExplosionParticle", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionParticle), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionParticle_MetaData), NewProp_ExplosionParticle_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionSound = { "ExplosionSound", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionSound_MetaData), NewProp_ExplosionSound_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDelay = { "ExplosionDelay", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionDelay), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionDelay_MetaData), NewProp_ExplosionDelay_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionRadius = { "ExplosionRadius", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionRadius_MetaData), NewProp_ExplosionRadius_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDamage = { "ExplosionDamage", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_MineItem, ExplosionDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionDamage_MetaData), NewProp_ExplosionDamage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANBC_MineItem_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionCollision,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionParticle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionSound,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDelay,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_MineItem_Statics::NewProp_ExplosionDamage,
@@ -122,10 +147,10 @@ ANBC_MineItem::~ANBC_MineItem() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_MineItem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_MineItem, ANBC_MineItem::StaticClass, TEXT("ANBC_MineItem"), &Z_Registration_Info_UClass_ANBC_MineItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_MineItem), 4104416058U) },
+		{ Z_Construct_UClass_ANBC_MineItem, ANBC_MineItem::StaticClass, TEXT("ANBC_MineItem"), &Z_Registration_Info_UClass_ANBC_MineItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_MineItem), 4174145840U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_MineItem_h_914393074(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_MineItem_h_2586247971(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_MineItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_MineItem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

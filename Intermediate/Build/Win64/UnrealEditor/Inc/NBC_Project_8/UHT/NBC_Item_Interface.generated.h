@@ -9,10 +9,18 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef NBC_PROJECT_8_NBC_Item_Interface_generated_h
 #error "NBC_Item_Interface.generated.h already included, missing '#pragma once' in NBC_Item_Interface.h"
 #endif
 #define NBC_PROJECT_8_NBC_Item_Interface_generated_h
+
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Item_Interface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnItemEndOverlap); \
+	DECLARE_FUNCTION(execOnItemOverlap);
+
 
 #define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Item_Interface_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
@@ -58,6 +66,7 @@ public: \
 #define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Item_Interface_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Item_Interface_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Item_Interface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

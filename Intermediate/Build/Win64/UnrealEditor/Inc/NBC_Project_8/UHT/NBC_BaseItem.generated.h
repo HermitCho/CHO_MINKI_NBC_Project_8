@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NBC_PROJECT_8_NBC_BaseItem_generated_h
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANBC_BaseItem(); \
 	friend struct Z_Construct_UClass_ANBC_BaseItem_Statics; \
@@ -24,7 +24,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ANBC_BaseItem*>(this); }
 
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ANBC_BaseItem(ANBC_BaseItem&&); \
@@ -36,12 +36,12 @@ public: \
 	NO_API virtual ~ANBC_BaseItem();
 
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_9_PROLOG
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_12_GENERATED_BODY \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_11_PROLOG
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_12_INCLASS_NO_PURE_DECLS \
-	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_12_ENHANCED_CONSTRUCTORS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_14_INCLASS_NO_PURE_DECLS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_BaseItem_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

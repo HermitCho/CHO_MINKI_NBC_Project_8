@@ -1,0 +1,38 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_BigCoinItem.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_MineItem.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_HealingItem.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_SmallCoinItem.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_Character.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/__ExternalActors__/Levels/NewMap/D/KT/JHTVFBMDXN976R8VAF4LSA.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/__ExternalActors__/Levels/NewMap/5/85/RZIYPZUAU0KH96UKREN5Q8.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/__ExternalActors__/Levels/NewMap/F/2N/UVN69Y59G8AJQTUE4KDC2J.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/__ExternalActors__/Levels/NewMap/A/IA/OUD8T2V5IOVO16VWCUKCHT.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Resources/Maps/BasicLevel.umap",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_SpawnVolume.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/DataTables/NBC_ItemSpawnTable.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/DataTables/NBC_ItemSpawnTable1.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/DataTables/NBC_ItemSpawnTable2.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_GameInstance.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBCGameMode.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBCPlayerController.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/UI/Widgets/WBP_NBC_HUD.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/UI/Widgets/WBP_NBC_MainMenu.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Resources/Maps/MenuLevel.umap",
+				"D:/UnrealEngine/NBC_Project_8/Content/UI/Widgets/WBP_NBC_HP.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/BP_NBC_GameState.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Resources/Maps/IntermediateLevel.umap",
+				"D:/UnrealEngine/NBC_Project_8/Content/Resources/Maps/AdvancedLevel.umap",
+				"D:/UnrealEngine/NBC_Project_8/Content/UI/Widget/WBP_NBC_HUD.uasset",
+				"D:/UnrealEngine/NBC_Project_8/Content/Blueprints/MyNBC_HealingItem.uasset"
+			]
+		}
+	]
+}

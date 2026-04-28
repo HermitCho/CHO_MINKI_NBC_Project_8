@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -8,6 +8,7 @@
 
 class UInputMappingContext;
 class UInputAction;
+//class UUserWidget;
 
 UCLASS()
 class NBC_PROJECT_8_API ANBCPlayerController : public APlayerController
@@ -19,18 +20,44 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputMappingContext* InputMappingContext;
-	// IA_Move¸¦ ÁöÁ¤ÇÒ º¯¼ö
+	// IA_Moveë¥¼ ì§€ì •í•  ë³€ìˆ˜
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* MoveAction;
-	// IA_Jump¸¦ ÁöÁ¤ÇÒ º¯¼ö
+	// IA_Jumpë¥¼ ì§€ì •í•  ë³€ìˆ˜
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* JumpAction;
-	// IA_Look¸¦ ÁöÁ¤ÇÒ º¯¼ö
+	// IA_Lookë¥¼ ì§€ì •í•  ë³€ìˆ˜
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* LookAction;
-	// IA_Sprint¸¦ ÁöÁ¤ÇÒ º¯¼ö
+	// IA_Sprintë¥¼ ì§€ì •í•  ë³€ìˆ˜
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* SprintAction;
 
+	// ë°›ì•„ì„œ ì €ì¥í•  ìœ„ì ¯ í´ë˜ìŠ¤
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "HUD")
+	TSubclassOf<UUserWidget> HUDWidgetClass;
+	// ì¸ìŠ¤í„´ìŠ¤ë¡œ ìƒì„±í•  ìœ„ì ¯
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "HUD")
+	UUserWidget* HUDWidgetInstance;
+
+	// ë©”ë‰´ UI
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Menu")
+	TSubclassOf<UUserWidget> MainMenuWidgetClass;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Menu")
+	UUserWidget* MainMenuWidgetInstance;
+
+	UFUNCTION(BlueprintPure, Category = "HUD")
+	UUserWidget* GetHUDWidget() const;
+	// HUD í‘œì‹œ
+	UFUNCTION(BlueprintCallable, Category = "HUD")
+	void ShowGameHUD();
+	// ë©”ì¸ ë©”ë‰´ í‘œì‹œ
+	UFUNCTION(BlueprintCallable, Category = "Menu")
+	void ShowMainMenu(bool bIsRestart);
+	// ê²Œì„ ì‹œì‘
+	UFUNCTION(BlueprintCallable, Category = "Menu")
+	void StartGame();
+
+protected:
 	virtual void BeginPlay() override;
 };

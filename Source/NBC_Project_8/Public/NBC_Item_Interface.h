@@ -17,10 +17,21 @@ class NBC_PROJECT_8_API INBC_Item_Interface
 {
 	GENERATED_BODY()
 
-	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void OnItemOverlap(AActor* OverrlapActor) = 0;
-	virtual void OnItemEndOverlap(AActor* OverrlapActor) = 0;
+	UFUNCTION()
+	virtual void OnItemOverlap(
+		UPrimitiveComponent* OverlappedComp,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult) = 0;
+	UFUNCTION()
+	virtual void OnItemEndOverlap(
+		UPrimitiveComponent* OverlappedComp,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex) = 0;
 	virtual void ActivateItem(AActor* Activator) = 0;
 	virtual FName GetItemType() const = 0;
 };

@@ -11,5 +11,8 @@ ANBC_SmallCoinItem::ANBC_SmallCoinItem()
 
 void ANBC_SmallCoinItem::ActivateItem(AActor* Activator)
 {
-	DestroyItem();
+    // 부모의 기본 점수 획득 로직 사용
+    Super::ActivateItem(Activator);
+
+    // 스몰 코인만의 별도 동작은 여기에 추가
 }

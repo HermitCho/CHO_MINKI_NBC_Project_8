@@ -90,10 +90,10 @@ ANBC_HealingItem::~ANBC_HealingItem() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_HealingItem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_HealingItem, ANBC_HealingItem::StaticClass, TEXT("ANBC_HealingItem"), &Z_Registration_Info_UClass_ANBC_HealingItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_HealingItem), 215802700U) },
+		{ Z_Construct_UClass_ANBC_HealingItem, ANBC_HealingItem::StaticClass, TEXT("ANBC_HealingItem"), &Z_Registration_Info_UClass_ANBC_HealingItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_HealingItem), 3019171900U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_HealingItem_h_386906214(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_HealingItem_h_3085425913(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_HealingItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_HealingItem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

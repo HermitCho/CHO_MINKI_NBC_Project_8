@@ -79,10 +79,10 @@ ANBC_SmallCoinItem::~ANBC_SmallCoinItem() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_SmallCoinItem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_SmallCoinItem, ANBC_SmallCoinItem::StaticClass, TEXT("ANBC_SmallCoinItem"), &Z_Registration_Info_UClass_ANBC_SmallCoinItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_SmallCoinItem), 1745259892U) },
+		{ Z_Construct_UClass_ANBC_SmallCoinItem, ANBC_SmallCoinItem::StaticClass, TEXT("ANBC_SmallCoinItem"), &Z_Registration_Info_UClass_ANBC_SmallCoinItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_SmallCoinItem), 717356364U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_SmallCoinItem_h_3349154349(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_SmallCoinItem_h_3542212445(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_SmallCoinItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_SmallCoinItem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

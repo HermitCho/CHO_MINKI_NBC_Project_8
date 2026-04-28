@@ -9,12 +9,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UUserWidget;
 #ifdef NBC_PROJECT_8_NBCPlayerController_generated_h
 #error "NBCPlayerController.generated.h already included, missing '#pragma once' in NBCPlayerController.h"
 #endif
 #define NBC_PROJECT_8_NBCPlayerController_generated_h
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execStartGame); \
+	DECLARE_FUNCTION(execShowMainMenu); \
+	DECLARE_FUNCTION(execShowGameHUD); \
+	DECLARE_FUNCTION(execGetHUDWidget);
+
+
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANBCPlayerController(); \
 	friend struct Z_Construct_UClass_ANBCPlayerController_Statics; \
@@ -23,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(ANBCPlayerController)
 
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ANBCPlayerController(ANBCPlayerController&&); \
@@ -35,12 +43,13 @@ public: \
 	NO_API virtual ~ANBCPlayerController();
 
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_12_PROLOG
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_GENERATED_BODY \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_13_PROLOG
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_INCLASS_NO_PURE_DECLS \
-	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_15_ENHANCED_CONSTRUCTORS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_INCLASS_NO_PURE_DECLS \
+	FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -63,6 +63,18 @@
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_CoinItem.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_FItemSpawnRow.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_GameInstance.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_GameState.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_GameStateBase.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_HealingItem.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
@@ -73,6 +85,9 @@
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SmallCoinItem.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SpawnVolume.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
     <Filter Include="Source\NBC_Project_8\Public">
@@ -96,6 +111,18 @@
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_CoinItem.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_FItemSpawnRow.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_GameInstance.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_GameState.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_GameStateBase.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_HealingItem.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
@@ -106,6 +133,9 @@
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SmallCoinItem.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SpawnVolume.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
   </ItemGroup>
