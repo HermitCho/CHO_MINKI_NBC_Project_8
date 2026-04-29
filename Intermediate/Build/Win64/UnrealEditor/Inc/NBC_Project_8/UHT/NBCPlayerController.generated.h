@@ -16,6 +16,8 @@ class UUserWidget;
 #define NBC_PROJECT_8_NBCPlayerController_generated_h
 
 #define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execExitGame); \
+	DECLARE_FUNCTION(execHandleExitOrMenu); \
 	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execShowMainMenu); \
 	DECLARE_FUNCTION(execShowGameHUD); \

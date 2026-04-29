@@ -11,6 +11,8 @@ void EmptyLinkFunctionForGeneratedCodeNBC_GameState() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AGameState();
+ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 NBC_PROJECT_8_API UClass* Z_Construct_UClass_ANBC_GameState();
 NBC_PROJECT_8_API UClass* Z_Construct_UClass_ANBC_GameState_NoRegister();
 UPackage* Z_Construct_UPackage__Script_NBC_Project_8();
@@ -246,6 +248,14 @@ struct Z_Construct_UClass_ANBC_GameState_Statics
 		{ "ToolTip", "\xeb\xa0\x88\xeb\xb2\xa8 \xeb\xb3\x84 \xec\x95\x84\xec\x9d\xb4\xed\x85\x9c \xec\x8a\xa4\xed\x8f\xb0 \xea\xb0\x9c\xec\x88\x98" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionParticle_MetaData[] = {
+		{ "Category", "RandomExplosion" },
+		{ "ModuleRelativePath", "Public/NBC_GameState.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionSound_MetaData[] = {
+		{ "Category", "RandomExplosion" },
+		{ "ModuleRelativePath", "Public/NBC_GameState.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SpawnedCoinCount;
@@ -259,6 +269,8 @@ struct Z_Construct_UClass_ANBC_GameState_Statics
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_LevelMapNames;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SpawnItemCountLvl_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_SpawnItemCountLvl;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionParticle;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosionSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -284,6 +296,8 @@ const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_ANBC_GameState_S
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ANBC_GameState_Statics::NewProp_LevelMapNames = { "LevelMapNames", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_GameState, LevelMapNames), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelMapNames_MetaData), NewProp_LevelMapNames_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ANBC_GameState_Statics::NewProp_SpawnItemCountLvl_Inner = { "SpawnItemCountLvl", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ANBC_GameState_Statics::NewProp_SpawnItemCountLvl = { "SpawnItemCountLvl", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_GameState, SpawnItemCountLvl), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnItemCountLvl_MetaData), NewProp_SpawnItemCountLvl_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBC_GameState_Statics::NewProp_ExplosionParticle = { "ExplosionParticle", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_GameState, ExplosionParticle), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionParticle_MetaData), NewProp_ExplosionParticle_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBC_GameState_Statics::NewProp_ExplosionSound = { "ExplosionSound", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBC_GameState, ExplosionSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosionSound_MetaData), NewProp_ExplosionSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANBC_GameState_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_Score,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_SpawnedCoinCount,
@@ -297,6 +311,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANBC_Game
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_LevelMapNames,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_SpawnItemCountLvl_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_SpawnItemCountLvl,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_ExplosionParticle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBC_GameState_Statics::NewProp_ExplosionSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ANBC_GameState_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ANBC_GameState_Statics::DependentSingletons[])() = {
@@ -339,10 +355,10 @@ ANBC_GameState::~ANBC_GameState() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameState_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_GameState, ANBC_GameState::StaticClass, TEXT("ANBC_GameState"), &Z_Registration_Info_UClass_ANBC_GameState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_GameState), 263716096U) },
+		{ Z_Construct_UClass_ANBC_GameState, ANBC_GameState::StaticClass, TEXT("ANBC_GameState"), &Z_Registration_Info_UClass_ANBC_GameState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_GameState), 1080884955U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameState_h_2502582327(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameState_h_2178732764(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameState_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

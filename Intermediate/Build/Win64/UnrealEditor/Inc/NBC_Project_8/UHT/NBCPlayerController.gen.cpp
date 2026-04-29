@@ -20,6 +20,42 @@ UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_NBC_Project_8();
 // End Cross Module References
 
+// Begin Class ANBCPlayerController Function ExitGame
+struct Z_Construct_UFunction_ANBCPlayerController_ExitGame_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Menu" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xea\xb2\x8c\xec\x9e\x84 \xec\xa2\x85\xeb\xa3\x8c\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NBCPlayerController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xea\xb2\x8c\xec\x9e\x84 \xec\xa2\x85\xeb\xa3\x8c" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANBCPlayerController_ExitGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANBCPlayerController, nullptr, "ExitGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ANBCPlayerController_ExitGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ANBCPlayerController_ExitGame_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ANBCPlayerController_ExitGame()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ANBCPlayerController_ExitGame_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ANBCPlayerController::execExitGame)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ExitGame();
+	P_NATIVE_END;
+}
+// End Class ANBCPlayerController Function ExitGame
+
 // Begin Class ANBCPlayerController Function GetHUDWidget
 struct Z_Construct_UFunction_ANBCPlayerController_GetHUDWidget_Statics
 {
@@ -64,6 +100,42 @@ DEFINE_FUNCTION(ANBCPlayerController::execGetHUDWidget)
 	P_NATIVE_END;
 }
 // End Class ANBCPlayerController Function GetHUDWidget
+
+// Begin Class ANBCPlayerController Function HandleExitOrMenu
+struct Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Menu" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xeb\xa9\x94\xeb\x89\xb4/\xea\xb2\x8c\xec\x9e\x84 \xeb\x82\x98\xea\xb0\x80\xea\xb8\xb0 \xec\xa1\xb0\xec\xa0\x88\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NBCPlayerController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xeb\xa9\x94\xeb\x89\xb4/\xea\xb2\x8c\xec\x9e\x84 \xeb\x82\x98\xea\xb0\x80\xea\xb8\xb0 \xec\xa1\xb0\xec\xa0\x88" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANBCPlayerController, nullptr, "HandleExitOrMenu", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ANBCPlayerController::execHandleExitOrMenu)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleExitOrMenu();
+	P_NATIVE_END;
+}
+// End Class ANBCPlayerController Function HandleExitOrMenu
 
 // Begin Class ANBCPlayerController Function ShowGameHUD
 struct Z_Construct_UFunction_ANBCPlayerController_ShowGameHUD_Statics
@@ -196,7 +268,9 @@ void ANBCPlayerController::StaticRegisterNativesANBCPlayerController()
 {
 	UClass* Class = ANBCPlayerController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "ExitGame", &ANBCPlayerController::execExitGame },
 		{ "GetHUDWidget", &ANBCPlayerController::execGetHUDWidget },
+		{ "HandleExitOrMenu", &ANBCPlayerController::execHandleExitOrMenu },
 		{ "ShowGameHUD", &ANBCPlayerController::execShowGameHUD },
 		{ "ShowMainMenu", &ANBCPlayerController::execShowMainMenu },
 		{ "StartGame", &ANBCPlayerController::execStartGame },
@@ -302,6 +376,10 @@ struct Z_Construct_UClass_ANBCPlayerController_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/NBCPlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsRestartMenu_MetaData[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "Public/NBCPlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InputMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -312,10 +390,14 @@ struct Z_Construct_UClass_ANBCPlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HUDWidgetInstance;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_MainMenuWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainMenuWidgetInstance;
+	static void NewProp_bIsRestartMenu_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsRestartMenu;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ANBCPlayerController_ExitGame, "ExitGame" }, // 2083863701
 		{ &Z_Construct_UFunction_ANBCPlayerController_GetHUDWidget, "GetHUDWidget" }, // 4141116606
+		{ &Z_Construct_UFunction_ANBCPlayerController_HandleExitOrMenu, "HandleExitOrMenu" }, // 3982307638
 		{ &Z_Construct_UFunction_ANBCPlayerController_ShowGameHUD, "ShowGameHUD" }, // 1884691765
 		{ &Z_Construct_UFunction_ANBCPlayerController_ShowMainMenu, "ShowMainMenu" }, // 249719881
 		{ &Z_Construct_UFunction_ANBCPlayerController_StartGame, "StartGame" }, // 1303948422
@@ -335,6 +417,11 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ANBCPlayerContr
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_HUDWidgetInstance = { "HUDWidgetInstance", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBCPlayerController, HUDWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HUDWidgetInstance_MetaData), NewProp_HUDWidgetInstance_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_MainMenuWidgetClass = { "MainMenuWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBCPlayerController, MainMenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetClass_MetaData), NewProp_MainMenuWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_MainMenuWidgetInstance = { "MainMenuWidgetInstance", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ANBCPlayerController, MainMenuWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetInstance_MetaData), NewProp_MainMenuWidgetInstance_MetaData) };
+void Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_bIsRestartMenu_SetBit(void* Obj)
+{
+	((ANBCPlayerController*)Obj)->bIsRestartMenu = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_bIsRestartMenu = { "bIsRestartMenu", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ANBCPlayerController), &Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_bIsRestartMenu_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsRestartMenu_MetaData), NewProp_bIsRestartMenu_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANBCPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_InputMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_MoveAction,
@@ -345,6 +432,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANBCPlaye
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_HUDWidgetInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_MainMenuWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_MainMenuWidgetInstance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANBCPlayerController_Statics::NewProp_bIsRestartMenu,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ANBCPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ANBCPlayerController_Statics::DependentSingletons[])() = {
@@ -387,10 +475,10 @@ ANBCPlayerController::~ANBCPlayerController() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBCPlayerController, ANBCPlayerController::StaticClass, TEXT("ANBCPlayerController"), &Z_Registration_Info_UClass_ANBCPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBCPlayerController), 4125460534U) },
+		{ Z_Construct_UClass_ANBCPlayerController, ANBCPlayerController::StaticClass, TEXT("ANBCPlayerController"), &Z_Registration_Info_UClass_ANBCPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBCPlayerController), 809971487U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_3916364879(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_117345642(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBCPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

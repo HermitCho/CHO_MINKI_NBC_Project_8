@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/WidgetComponent.h"
 #include "Components/TextBlock.h"
+#include "Components/ProgressBar.h" // 프로그레스 바 헤더 포함
 
 // Sets default values
 ANBC_Character::ANBC_Character()
@@ -45,11 +46,99 @@ ANBC_Character::ANBC_Character()
 	// 초기 체력 설정
 	MaxHealth = 100.0f;
 	Health = MaxHealth;
+
+	TargetPercent = 1.0f;
+	CurrentPercent = 1.0f;
+	LerpSpeed = 5.0f;
 }
 void ANBC_Character::BeginPlay()
 {
 	Super::BeginPlay();
 	UpdateOverheadHP();
+}
+
+void ANBC_Character::ApplySlow(float InSlowMultiplier, float Duration)
+{
+	if (!GetCharacterMovement()) return;
+
+	// 기존 슬로우 타이머 제거 (슬로우 갱신용)
+	GetWorldTimerManager().ClearTimer(SlowTimerHandle);
+
+	bIsSlowed = true;
+
+	GetCharacterMovement()->MaxWalkSpeed = NormalSpeed * InSlowMultiplier;
+
+	GetWorldTimerManager().SetTimer(
+		SlowTimerHandle,
+		this,
+		&ANBC_Character::ResetSpeed,
+		Duration,
+		false
+	);
+}
+
+void ANBC_Character::ResetSpeed()
+{
+	if (!GetCharacterMovement()) return;
+
+	bIsSlowed = false;
+
+	GetCharacterMovement()->MaxWalkSpeed = NormalSpeed;
+}
+
+void ANBC_Character::ApplyReverseControl(float Duration)
+{
+	bReverseControl = true;
+
+	GetWorldTimerManager().ClearTimer(ReverseControlTimerHandle);
+
+	GetWorldTimerManager().SetTimer(
+		ReverseControlTimerHandle,
+		this,
+		&ANBC_Character::ResetReverseControl,
+		Duration,
+		false
+	);
+}
+
+void ANBC_Character::ResetReverseControl()
+{
+	bReverseControl = false;
+}
+
+float ANBC_Character::GetSlowRemainingTime() const
+{
+	return GetWorldTimerManager().GetTimerRemaining(SlowTimerHandle);
+}
+
+float ANBC_Character::GetReverseRemainingTime() const
+{
+	return GetWorldTimerManager().GetTimerRemaining(ReverseControlTimerHandle);
+}
+
+FString ANBC_Character::GetDebuffText() const
+{
+	FString Result;
+
+	float SlowTime = GetWorldTimerManager().GetTimerRemaining(SlowTimerHandle);
+	if (SlowTime > 0.f)
+	{
+		Result += FString::Printf(
+			TEXT("<Slow>Slow : %.1fs</>\n"),
+			SlowTime
+		);
+	}
+
+	float ReverseTime = GetWorldTimerManager().GetTimerRemaining(ReverseControlTimerHandle);
+	if (ReverseTime > 0.f)
+	{
+		Result += FString::Printf(
+			TEXT("<ReverseControl>ReverseControl : %.1fs</>\n"),
+			ReverseTime
+		);
+	}
+
+	return Result;
 }
 
 void ANBC_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -130,7 +219,13 @@ void ANBC_Character::Move(const FInputActionValue& value)
 
 	// Value는 Axis2D로 설정된 IA_Move의 입력값 (WASD)을 담고 있음
 	// 예) (X=1, Y=0) → 전진 / (X=-1, Y=0) → 후진 / (X=0, Y=1) → 오른쪽 / (X=0, Y=-1) → 왼쪽
-	const FVector2D MoveInput = value.Get<FVector2D>();
+	FVector2D MoveInput = value.Get<FVector2D>();
+
+	//컨트롤러 반전
+	if (bReverseControl)
+	{
+		MoveInput *= -1.f;
+	}
 
 	if (!FMath::IsNearlyZero(MoveInput.X))
 	{
@@ -179,7 +274,7 @@ void ANBC_Character::StartSprint(const FInputActionValue& value)
 {
 	// Shift 키를 누른 순간 이 함수가 호출된다고 가정
 	// 스프린트 속도를 적용
-	if (GetCharacterMovement())
+	if (GetCharacterMovement() && !bIsSlowed)
 	{
 		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
 	}
@@ -189,7 +284,7 @@ void ANBC_Character::StopSprint(const FInputActionValue& value)
 {
 	// Shift 키를 뗀 순간 이 함수가 호출
 	// 평상시 속도로 복귀
-	if (GetCharacterMovement())
+	if (GetCharacterMovement() && !bIsSlowed)
 	{
 		GetCharacterMovement()->MaxWalkSpeed = NormalSpeed;
 	}
@@ -239,8 +334,36 @@ void ANBC_Character::UpdateOverheadHP()
 	{
 		HPText->SetText(FText::FromString(FString::Printf(TEXT("%.0f / %.0f"), Health, MaxHealth)));
 	}
+
+	TargetPercent = Health / MaxHealth;
+
+	if (!GetWorldTimerManager().IsTimerActive(HPBarTimerHandle))
+	{
+		GetWorldTimerManager().SetTimer(HPBarTimerHandle, this, &ANBC_Character::HandleHPBarLerp, 0.01f, true);
+	}
 }
 
+void ANBC_Character::HandleHPBarLerp()
+{
+	CurrentPercent = FMath::FInterpTo(CurrentPercent, TargetPercent, 0.01f, LerpSpeed);
+
+	UUserWidget* WidgetInst = OverheadWidget->GetUserWidgetObject();
+	if (WidgetInst)
+	{
+		if (UProgressBar* HPBar = Cast<UProgressBar>(WidgetInst->GetWidgetFromName(TEXT("HPBar"))))
+		{
+			HPBar->SetPercent(CurrentPercent);
+		}
+	}
+
+	// 목표치에 거의 도달했다면 타이머 종료
+	if (FMath::IsNearlyEqual(CurrentPercent, TargetPercent, 0.001f))
+	{
+		CurrentPercent = TargetPercent; // 값 보정
+		GetWorldTimerManager().ClearTimer(HPBarTimerHandle);
+		UE_LOG(LogTemp, Log, TEXT("HP Bar Timer Stopped."));
+	}
+}
 
 void ANBC_Character::OnDeath()
 {

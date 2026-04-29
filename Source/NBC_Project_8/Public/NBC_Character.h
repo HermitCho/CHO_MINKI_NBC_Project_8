@@ -27,6 +27,29 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Health")
 	void AddHealth(float Amount);
 
+	//슬로우
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void ApplySlow(float SlowMultiplier, float Duration);
+	//이동 속도 기본으로 초기화
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void ResetSpeed();
+	//컨트롤러 반전
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void ApplyReverseControl(float Duration);
+	//컨트롤러 반전 정상으로 초기화
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+	void ResetReverseControl();
+
+	// 슬로우 시간 가져오기
+	UFUNCTION(BlueprintPure, Category = "Debuff")
+	float GetSlowRemainingTime() const;
+	// 컨트롤러 반전 시간 가져오기
+	UFUNCTION(BlueprintPure, Category = "Debuff")
+	float GetReverseRemainingTime() const;
+	// 디버프 시간 UI를 위한 Text
+	UFUNCTION(BlueprintPure, Category = "Debuff")
+	FString GetDebuffText() const;
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -39,6 +62,10 @@ protected:
 	// 위젯 컴포넌트
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "UI")
 	UWidgetComponent* OverheadWidget;
+	// 체력바 애니메이션 속도
+	UPROPERTY(EditAnywhere, Category = "UI")
+	float LerpSpeed;
+
 
 	// 이동 속도 관련 프로퍼티들
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
@@ -47,6 +74,12 @@ protected:
 	float SprintSpeedMultiplier;  // "기본 속도" 대비 몇 배로 빠르게 달릴지 결정
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	float SprintSpeed; 	// 실제 스프린트 속도
+
+	bool bIsSlowed = false; // 슬로우 체크
+	FTimerHandle SlowTimerHandle; // 슬로우 제어 시간
+
+	bool bReverseControl = false; // 컨트롤러 반전 체크
+	FTimerHandle ReverseControlTimerHandle; // 컨트롤러 반전 제어 시간
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override; // 이 함수는 이후에 다루게 되니, 우선 삭제하기 않고 둡니다.
 
@@ -72,8 +105,15 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
 	float Health;
 
+	// 체력바 애니메이션을 위한 변수들
+	float TargetPercent;
+	float CurrentPercent;
+	// 애니메이션을 구동할 타이머 핸들
+	FTimerHandle HPBarTimerHandle;
+
 	void OnDeath();
 	void UpdateOverheadHP();
+	void HandleHPBarLerp();
 
 	// 데미지 처리 함수 - 외부로부터 데미지를 받을 때 호출됨
 	// 또는 AActor의 TakeDamage()를 오버라이드

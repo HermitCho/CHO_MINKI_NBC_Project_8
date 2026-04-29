@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define NBC_PROJECT_8_NBC_FItemSpawnRow_generated_h
 
-#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_FItemSpawnRow_h_10_GENERATED_BODY \
+#define FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_FItemSpawnRow_h_11_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FNBC_FItemSpawnRow_Statics; \
 	NBC_PROJECT_8_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

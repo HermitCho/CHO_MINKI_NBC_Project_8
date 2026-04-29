@@ -110,6 +110,20 @@ void ANBCPlayerController::ShowMainMenu(bool bIsRestart)
 			}
 		}
 
+		if (UTextBlock* ButtonText2 = Cast<UTextBlock>(MainMenuWidgetInstance->GetWidgetFromName(TEXT("ExitButtonText"))))
+		{
+			if (bIsRestart)
+			{
+				ButtonText2->SetText(FText::FromString(TEXT("Back to Menu")));
+				ButtonText2->Font.Size = 30;
+			}
+			else
+			{
+				ButtonText2->SetText(FText::FromString(TEXT("Exit")));
+				ButtonText2->Font.Size = 80;
+			}
+		}
+
 		if (bIsRestart)
 		{
 			//게임 종료 애니메이션 추가
@@ -130,6 +144,8 @@ void ANBCPlayerController::ShowMainMenu(bool bIsRestart)
 			}
 		}
 	}
+
+	SetPause(true);
 }
 
 // 게임 HUD 표시
@@ -178,5 +194,24 @@ void ANBCPlayerController::StartGame()
 	}
 
 	UGameplayStatics::OpenLevel(GetWorld(), FName("BasicLevel"));
+	bIsRestartMenu = false;
 	SetPause(false);
+}
+
+void ANBCPlayerController::HandleExitOrMenu()
+{
+	if (bIsRestartMenu)
+	{
+		ShowMainMenu(false);
+		bIsRestartMenu = false;
+	}
+	else
+	{
+		ExitGame();
+	}
+}
+
+void ANBCPlayerController::ExitGame()
+{
+	UKismetSystemLibrary::QuitGame(GetWorld(), GetWorld()->GetFirstPlayerController(), EQuitPreference::Quit, false);
 }

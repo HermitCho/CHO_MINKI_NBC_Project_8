@@ -22,6 +22,13 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
 	DECLARE_FUNCTION(execMove); \
+	DECLARE_FUNCTION(execGetDebuffText); \
+	DECLARE_FUNCTION(execGetReverseRemainingTime); \
+	DECLARE_FUNCTION(execGetSlowRemainingTime); \
+	DECLARE_FUNCTION(execResetReverseControl); \
+	DECLARE_FUNCTION(execApplyReverseControl); \
+	DECLARE_FUNCTION(execResetSpeed); \
+	DECLARE_FUNCTION(execApplySlow); \
 	DECLARE_FUNCTION(execAddHealth); \
 	DECLARE_FUNCTION(execGetHealth);
 

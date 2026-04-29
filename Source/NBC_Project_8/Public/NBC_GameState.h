@@ -66,4 +66,33 @@ public:
 	void EndLevel();
 	// HUD 업데이트
 	void UpdateHUD();
+
+	//폭발 이벤트
+	FTimerHandle ExplosionTimerHandle;
+
+	UPROPERTY(EditAnywhere, Category = "RandomExplosion")
+	UParticleSystem* ExplosionParticle;
+
+	UPROPERTY(EditAnywhere, Category = "RandomExplosion")
+	USoundBase* ExplosionSound;
+
+	void StartExplosionEvent();
+	void SpawnExplosionWarning();
+	void ExplodeAtLocation(FVector Location);
+
+	//스파이크 이벤트
+	FTimerHandle SpikeEventTimerHandle;
+
+	bool bIsSpikeEventOn;
+
+	void SpikeTrapEvent();
+	void TurnBoolSpikeEvent();
+
+	//전체 이벤트
+	FTimerHandle EventMessageTimerHandle;
+	TArray<FString> ActiveEventMessages;
+
+	void ShowEventMessage(const FString& Message, float Duration = 2.f);
+	void RemoveEventMessage(FString Message);
+	void RefreshEventUI();
 };

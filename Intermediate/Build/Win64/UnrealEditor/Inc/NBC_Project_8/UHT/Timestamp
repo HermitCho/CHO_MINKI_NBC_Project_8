@@ -5,11 +5,14 @@ D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_BigCoinItem.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_Character.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_CoinItem.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_FItemSpawnRow.h
-D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_GameStateBase.h
-D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_HealingItem.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_GameInstance.h
-D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_Item_Interface.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_GameState.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_HealingItem.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_GameStateBase.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_Item_Interface.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_MineItem.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_SlowingItem.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_ReverseControlItem.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_SmallCoinItem.h
+D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_SpikeTrap.h
 D:\UnrealEngine\NBC_Project_8\Source\NBC_Project_8\Public\NBC_SpawnVolume.h

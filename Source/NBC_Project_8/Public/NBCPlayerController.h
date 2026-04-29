@@ -45,6 +45,8 @@ public:
 	TSubclassOf<UUserWidget> MainMenuWidgetClass;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Menu")
 	UUserWidget* MainMenuWidgetInstance;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Menu")
+	bool bIsRestartMenu;
 
 	UFUNCTION(BlueprintPure, Category = "HUD")
 	UUserWidget* GetHUDWidget() const;
@@ -57,6 +59,13 @@ public:
 	// 게임 시작
 	UFUNCTION(BlueprintCallable, Category = "Menu")
 	void StartGame();
+	// 메뉴/게임 나가기 조절
+	UFUNCTION(BlueprintCallable, Category = "Menu")
+	void HandleExitOrMenu();
+	// 게임 종료
+	UFUNCTION(BlueprintCallable, Category = "Menu")
+	void ExitGame();
+
 
 protected:
 	virtual void BeginPlay() override;

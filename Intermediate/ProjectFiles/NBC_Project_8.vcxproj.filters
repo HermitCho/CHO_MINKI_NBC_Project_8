@@ -84,10 +84,19 @@
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_MineItem.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_ReverseControlItem.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SlowingItem.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SmallCoinItem.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SpawnVolume.cpp">
+      <Filter>Source\NBC_Project_8\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Private\NBC_SpikeTrap.cpp">
       <Filter>Source\NBC_Project_8\Private</Filter>
     </ClCompile>
     <Filter Include="Source\NBC_Project_8\Public">
@@ -132,10 +141,19 @@
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_MineItem.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_ReverseControlItem.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SlowingItem.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SmallCoinItem.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SpawnVolume.h">
+      <Filter>Source\NBC_Project_8\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_Project_8\Public\NBC_SpikeTrap.h">
       <Filter>Source\NBC_Project_8\Public</Filter>
     </ClCompile>
   </ItemGroup>
