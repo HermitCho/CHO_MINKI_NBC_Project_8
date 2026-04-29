@@ -232,11 +232,11 @@ struct Z_Construct_UFunction_ANBC_Character_GetHealth_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Health" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xed\x98\x84\xec\x9e\xac \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98\n" },
+		{ "Comment", "// \xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x97\x90\xec\x84\x9c \xed\x98\x84\xec\x9e\xac \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98\n" },
 #endif
 		{ "ModuleRelativePath", "Public/NBC_Character.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xed\x98\x84\xec\x9e\xac \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98" },
+		{ "ToolTip", "\xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x97\x90\xec\x84\x9c \xed\x98\x84\xec\x9e\xac \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -268,6 +268,54 @@ DEFINE_FUNCTION(ANBC_Character::execGetHealth)
 	P_NATIVE_END;
 }
 // End Class ANBC_Character Function GetHealth
+
+// Begin Class ANBC_Character Function GetMaxtHealth
+struct Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics
+{
+	struct NBC_Character_eventGetMaxtHealth_Parms
+	{
+		int32 ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x97\x90\xec\x84\x9c \xec\xb5\x9c\xeb\x8c\x80 \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NBC_Character.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xeb\x8b\xa4\xeb\xa5\xb8 \xea\xb3\xb3\xec\x97\x90\xec\x84\x9c \xec\xb5\x9c\xeb\x8c\x80 \xec\xb2\xb4\xeb\xa0\xa5\xec\x9d\x84 \xea\xb0\x80\xec\xa0\xb8\xec\x98\xa4\xeb\x8a\x94 \xed\x95\xa8\xec\x88\x98" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NBC_Character_eventGetMaxtHealth_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANBC_Character, nullptr, "GetMaxtHealth", nullptr, nullptr, Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::NBC_Character_eventGetMaxtHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::NBC_Character_eventGetMaxtHealth_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ANBC_Character_GetMaxtHealth()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ANBC_Character_GetMaxtHealth_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ANBC_Character::execGetMaxtHealth)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxtHealth();
+	P_NATIVE_END;
+}
+// End Class ANBC_Character Function GetMaxtHealth
 
 // Begin Class ANBC_Character Function GetReverseRemainingTime
 struct Z_Construct_UFunction_ANBC_Character_GetReverseRemainingTime_Statics
@@ -723,6 +771,7 @@ void ANBC_Character::StaticRegisterNativesANBC_Character()
 		{ "ApplySlow", &ANBC_Character::execApplySlow },
 		{ "GetDebuffText", &ANBC_Character::execGetDebuffText },
 		{ "GetHealth", &ANBC_Character::execGetHealth },
+		{ "GetMaxtHealth", &ANBC_Character::execGetMaxtHealth },
 		{ "GetReverseRemainingTime", &ANBC_Character::execGetReverseRemainingTime },
 		{ "GetSlowRemainingTime", &ANBC_Character::execGetSlowRemainingTime },
 		{ "Look", &ANBC_Character::execLook },
@@ -859,7 +908,8 @@ struct Z_Construct_UClass_ANBC_Character_Statics
 		{ &Z_Construct_UFunction_ANBC_Character_ApplyReverseControl, "ApplyReverseControl" }, // 303186191
 		{ &Z_Construct_UFunction_ANBC_Character_ApplySlow, "ApplySlow" }, // 3363303245
 		{ &Z_Construct_UFunction_ANBC_Character_GetDebuffText, "GetDebuffText" }, // 2351483139
-		{ &Z_Construct_UFunction_ANBC_Character_GetHealth, "GetHealth" }, // 1663325116
+		{ &Z_Construct_UFunction_ANBC_Character_GetHealth, "GetHealth" }, // 540739032
+		{ &Z_Construct_UFunction_ANBC_Character_GetMaxtHealth, "GetMaxtHealth" }, // 1320746611
 		{ &Z_Construct_UFunction_ANBC_Character_GetReverseRemainingTime, "GetReverseRemainingTime" }, // 217825052
 		{ &Z_Construct_UFunction_ANBC_Character_GetSlowRemainingTime, "GetSlowRemainingTime" }, // 1922502937
 		{ &Z_Construct_UFunction_ANBC_Character_Look, "Look" }, // 3209175963
@@ -938,10 +988,10 @@ ANBC_Character::~ANBC_Character() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Character_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ANBC_Character, ANBC_Character::StaticClass, TEXT("ANBC_Character"), &Z_Registration_Info_UClass_ANBC_Character, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_Character), 3491602525U) },
+		{ Z_Construct_UClass_ANBC_Character, ANBC_Character::StaticClass, TEXT("ANBC_Character"), &Z_Registration_Info_UClass_ANBC_Character, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANBC_Character), 1275842568U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Character_h_4122051087(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Character_h_2797752539(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Character_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_Character_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

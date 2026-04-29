@@ -2,6 +2,7 @@
 #include "NBC_Character.h"
 #include "NBCPlayerController.h"
 #include "NBC_GameState.h"
+#include "NBC_GameInstance.h"
 #include "EnhancedInputComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -54,6 +55,20 @@ ANBC_Character::ANBC_Character()
 void ANBC_Character::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// GameInstance에서 저장된 체력 불러오기
+	if (UNBC_GameInstance* NBCGameInstance = Cast<UNBC_GameInstance>(GetGameInstance()))
+	{
+		if (!NBCGameInstance->bIsFirstStart)
+		{
+			Health = NBCGameInstance->CurrentPlayerHealth;
+		}
+		else
+		{
+			Health = MaxHealth;
+		}
+	}
+
 	UpdateOverheadHP();
 }
 
@@ -294,6 +309,13 @@ int32 ANBC_Character::GetHealth() const
 {
 	return Health;
 }
+
+int32 ANBC_Character::GetMaxtHealth() const
+{
+	return MaxHealth;
+}
+
+
 
 void ANBC_Character::AddHealth(float Amount)
 {

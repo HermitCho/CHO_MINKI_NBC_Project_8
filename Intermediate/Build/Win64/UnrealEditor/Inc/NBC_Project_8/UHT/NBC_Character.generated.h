@@ -30,6 +30,7 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execResetSpeed); \
 	DECLARE_FUNCTION(execApplySlow); \
 	DECLARE_FUNCTION(execAddHealth); \
+	DECLARE_FUNCTION(execGetMaxtHealth); \
 	DECLARE_FUNCTION(execGetHealth);
 
 

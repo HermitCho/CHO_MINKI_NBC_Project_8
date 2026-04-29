@@ -170,6 +170,16 @@ void ANBC_GameState::EndLevel()
 		UNBC_GameInstance* NBCGameInstance = Cast<UNBC_GameInstance>(GameInstance);
 		if (NBCGameInstance)
 		{
+			//캐릭터 체력 레벨 전환 시에도 유지되는 if문
+			if (ACharacter* PlayerChar = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0))
+			{
+				if (ANBC_Character* NBCChar = Cast<ANBC_Character>(PlayerChar))
+				{
+					NBCGameInstance->CurrentPlayerHealth = NBCChar->GetHealth();
+					NBCGameInstance->bIsFirstStart = false;
+				}
+			}
+
 			AddScore(Score);
 			CurrentLevelIndex++;
 			NBCGameInstance->CurrentLevelIndex = CurrentLevelIndex;

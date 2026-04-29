@@ -115,12 +115,10 @@ void ANBCPlayerController::ShowMainMenu(bool bIsRestart)
 			if (bIsRestart)
 			{
 				ButtonText2->SetText(FText::FromString(TEXT("Back to Menu")));
-				ButtonText2->Font.Size = 30;
 			}
 			else
 			{
 				ButtonText2->SetText(FText::FromString(TEXT("Exit")));
-				ButtonText2->Font.Size = 80;
 			}
 		}
 
@@ -189,6 +187,7 @@ void ANBCPlayerController::StartGame()
 {
 	if (UNBC_GameInstance* NBCGameInstance = Cast<UNBC_GameInstance>(UGameplayStatics::GetGameInstance(this)))
 	{
+		NBCGameInstance->bIsFirstStart = true;
 		NBCGameInstance->CurrentLevelIndex = 0;
 		NBCGameInstance->TotalScore = 0;
 	}

@@ -113,10 +113,33 @@ struct Z_Construct_UClass_UNBC_GameInstance_Statics
 		{ "ToolTip", "\xed\x98\x84\xec\x9e\xac \xeb\xa0\x88\xeb\xb2\xa8 \xea\xb2\x8c\xec\x9e\x84 \xec\x8b\x9c\xea\xb0\x84" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerHealth_MetaData[] = {
+		{ "Category", "GameData" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xeb\xa0\x88\xeb\xb2\xa8 \xea\xb0\x84 \xec\x9c\xa0\xec\xa7\x80\xeb\x90\xa0 \xec\xb2\xb4\xeb\xa0\xa5 \xeb\xb3\x80\xec\x88\x98\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NBC_GameInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xeb\xa0\x88\xeb\xb2\xa8 \xea\xb0\x84 \xec\x9c\xa0\xec\xa7\x80\xeb\x90\xa0 \xec\xb2\xb4\xeb\xa0\xa5 \xeb\xb3\x80\xec\x88\x98" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsFirstStart_MetaData[] = {
+		{ "Category", "GameData" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xea\xb2\x8c\xec\x9e\x84 \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c \xec\xb4\x88\xea\xb8\xb0\xed\x99\x94\xeb\xa5\xbc \xec\x9c\x84\xed\x95\x9c \xed\x94\x8c\xeb\x9e\x98\xea\xb7\xb8\n" },
+#endif
+		{ "ModuleRelativePath", "Public/NBC_GameInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xea\xb2\x8c\xec\x9e\x84 \xec\x8b\x9c\xec\x9e\x91 \xec\x8b\x9c \xec\xb4\x88\xea\xb8\xb0\xed\x99\x94\xeb\xa5\xbc \xec\x9c\x84\xed\x95\x9c \xed\x94\x8c\xeb\x9e\x98\xea\xb7\xb8" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_TotalScore;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentLevelIndex;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentLevelDuration;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentPlayerHealth;
+	static void NewProp_bIsFirstStart_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsFirstStart;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -131,10 +154,18 @@ struct Z_Construct_UClass_UNBC_GameInstance_Statics
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_TotalScore = { "TotalScore", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNBC_GameInstance, TotalScore), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalScore_MetaData), NewProp_TotalScore_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentLevelIndex = { "CurrentLevelIndex", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNBC_GameInstance, CurrentLevelIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLevelIndex_MetaData), NewProp_CurrentLevelIndex_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentLevelDuration = { "CurrentLevelDuration", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNBC_GameInstance, CurrentLevelDuration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLevelDuration_MetaData), NewProp_CurrentLevelDuration_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentPlayerHealth = { "CurrentPlayerHealth", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UNBC_GameInstance, CurrentPlayerHealth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentPlayerHealth_MetaData), NewProp_CurrentPlayerHealth_MetaData) };
+void Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_bIsFirstStart_SetBit(void* Obj)
+{
+	((UNBC_GameInstance*)Obj)->bIsFirstStart = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_bIsFirstStart = { "bIsFirstStart", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UNBC_GameInstance), &Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_bIsFirstStart_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsFirstStart_MetaData), NewProp_bIsFirstStart_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UNBC_GameInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_TotalScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentLevelIndex,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentLevelDuration,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_CurrentPlayerHealth,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UNBC_GameInstance_Statics::NewProp_bIsFirstStart,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UNBC_GameInstance_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UNBC_GameInstance_Statics::DependentSingletons[])() = {
@@ -177,10 +208,10 @@ UNBC_GameInstance::~UNBC_GameInstance() {}
 struct Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UNBC_GameInstance, UNBC_GameInstance::StaticClass, TEXT("UNBC_GameInstance"), &Z_Registration_Info_UClass_UNBC_GameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNBC_GameInstance), 2412830914U) },
+		{ Z_Construct_UClass_UNBC_GameInstance, UNBC_GameInstance::StaticClass, TEXT("UNBC_GameInstance"), &Z_Registration_Info_UClass_UNBC_GameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNBC_GameInstance), 2304666250U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameInstance_h_2531302206(TEXT("/Script/NBC_Project_8"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameInstance_h_2074880195(TEXT("/Script/NBC_Project_8"),
 	Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_NBC_Project_8_Source_NBC_Project_8_Public_NBC_GameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

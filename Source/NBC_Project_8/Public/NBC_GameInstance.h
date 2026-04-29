@@ -27,6 +27,13 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GameData")
 	float CurrentLevelDuration;
 
+	// 레벨 간 유지될 체력 변수
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameData")
+	float CurrentPlayerHealth;
+	// 게임 시작 시 초기화를 위한 플래그
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GameData")
+	bool bIsFirstStart = true;
+
 	UFUNCTION(BlueprintCallable, Category = "GameData")
 	void AddToScore(int32 Amount);
 };
